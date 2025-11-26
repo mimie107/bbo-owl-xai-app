@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import shap
+#import shap
 import joblib
 import matplotlib.pyplot as plt
 from sklearn.inspection import PartialDependenceDisplay
@@ -179,30 +179,9 @@ st.markdown("---")
 # ===========================
 # 2. SHAP Analysis (On Demand)
 # ===========================
-st.subheader("2️⃣ SHAP Explainability (Click to Generate)")
+#st.subheader("2️⃣ SHAP Explainability (Click to Generate)")
 
-if st.button("Generate SHAP Plots"):
-    shap_values = explainer.shap_values(df_sample)
 
-    # SHAP Summary Plot
-    st.write("**SHAP Summary Plot (Global Impact)**")
-    fig2 = plt.figure()
-    shap.summary_plot(shap_values, df_sample, show=False)
-    st.pyplot(fig2)
-
-    # Force plot for user input
-    st.write("**SHAP Force Plot (Local Explanation for Current Input)**")
-    single_shap = explainer.shap_values(input_df)
-
-    fig3 = shap.force_plot(
-        explainer.expected_value,
-        single_shap,
-        input_df,
-        matplotlib=True
-    )
-    st.pyplot(fig3)
-
-st.markdown("---")
 
 # ===========================
 # 3. Partial Dependence Plot
