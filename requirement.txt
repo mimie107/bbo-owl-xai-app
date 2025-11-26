@@ -1,11 +1,12 @@
+
 streamlit==1.29.0
 pandas
 numpy
 scikit-learn
 joblib
 matplotlib
-shap==0.42.1
 lightgbm
-numba==0.56.4
-llvmlite==0.39.1
+urllib3
+
+
 
