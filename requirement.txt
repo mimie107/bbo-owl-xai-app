@@ -4,6 +4,8 @@ numpy
 scikit-learn
 joblib
 matplotlib
-shap==0.41.0
+shap==0.42.1
 lightgbm
-urllib3
+numba==0.56.4
+llvmlite==0.39.1
+
