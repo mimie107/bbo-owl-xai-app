@@ -53,7 +53,6 @@ y_pred = pd.read_csv(ypred_file)["sig_pred"]
 st.title("🦉 Owl Signal Strength Prediction App (BBO – MOTUS Project)")
 st.write("Predict Saw-whet owl signal strength and explain results using XAI.")
 
-st.header("🔧 Enter Detection Features")
 
 # ===========================
 # User Inputs
@@ -176,12 +175,6 @@ st.pyplot(fig1)
 
 st.markdown("---")
 
-# ===========================
-# 2. SHAP Analysis (On Demand)
-# ===========================
-#st.subheader("2️⃣ SHAP Explainability (Click to Generate)")
-
-
 
 # ===========================
 # 3. Partial Dependence Plot
@@ -211,4 +204,5 @@ st.pyplot(fig5)
 
 st.markdown("---")
 
-st.success("App Loaded Successfully. Use the SHAP Button to Generate Explanations.")
+st.success("App Loaded Successfully. Scroll up to explore all XAI insights.")
+
